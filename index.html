@@ -1,73 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
-  <html>
-    <head>
-      <title>Calculadora</title>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-      <form id="frm">
-        <div id="container">
-          <div id="calc">
-            <h1>Calculadora Padrão</h1>
-          </div>
+<!-- https://www.youtube.com/watch?v=I65OmypuW20 -->
 
-          <div id="menu"></div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
-          <div id="left">
-            <!--
-             
-              <div class="bloco">
-                <span>Nome:</span>
-                <input
-                  type="text"
-                  name="txtnome"
-                  placeholder="Introduza o seu nome"
-                />
-                <input
-                  id="enviar"
-                  type="button"
-                  value="Enviar"
-                  onClick="ola('Ola')"
-                />
-              </div>
-            -->
-            <div class="bloco1">
-              <span>Introduza os numeros:</span><br />
-              <h4>Contas</h4>
-              <input type="text" size="2" name="n1" placeholder=" " /><br />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="calc">
+      <div class="scroll">
+        <div id="display" class="display"></div>
+      </div>
+      <div class="calc-botoes">
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+      </div>
+    </div>
 
-              <input
-                type="text"
-                size="2"
-                name="n2"
-                placeholder="n2"
-              />
-              <br /><br />
-              <input type="button" value="+" onClick="soma()" />
-              <input type="button" value="-" onClick="subtracao('')" />
-              <input type="button" value="*" onClick="multiplicacao('')" />
-              <input
-                type="button"
-                value="/"
-                onClick="divisao('')"
-              /><br /><br />
-              <input type="button" value="Limpar" onClick="limpar()" />
-              <input type="button" value="Enviar" onClick="ola('Ola')" />
-            </div>
-          </div>
-
-          <div id="right">
-            <img id="mario1" src="Image/mario1.jpg" alt="" />
-            <img id="mario2" src="Image/mario2.jpg" alt="" />
-          </div>
-
-          <div id="bottom"></div>
-        </div>
-      </form>
-      <script src="main.js"></script>
-    </body>
-  </html>
+    <script>
+      src = 'main.js'
+    </script>
+  </body>
 </html>
