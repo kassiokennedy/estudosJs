@@ -1,55 +1,44 @@
-//alert('Ola mundo')
-/*
-function ola(x) {
-  var f = document.getElementById('frm')
-  var txt = f.txtnome
-  txt.value = 'Ola ' + txt.value
+const display = document.getElementById('display')
+const displayText = document.getElementById('display').textContent
+const igual = document.getElementById('igual')
+const apagar = document.getElementById('apagar')
+const maismenos = document.getElementById('maismenos')
+const limparCalculo = document.getElementById('limparCalculo')
+const limparTudo = document.getElementById('limparTudo')
+const porc = document.getElementById('porc')
+const virg = document.getElementById('virg')
+const divisaoUm = document.getElementById('divisaoUm')
+const potencia = document.getElementById('potencia')
+const raiz = document.getElementById('raiz')
+
+/* carrega os numeros na variavel nums */
+const nums = document.querySelectorAll('[id*=num]')
+const operadores = document.querySelectorAll('[id*=sinal]')
+
+/* armazena o primeiro numero digitado */
+let primeiro = true
+/* armazena o operador escolhido */
+let operador
+/* primeiraVariavelele chama de numeroAnterior */
+let primeiraVariavel
+/* segundaVariavelele chama de numeroAtual */
+let segundaVariavel
+/* */
+let apagarIgual
+
+/* recebe o texto */
+const inserirDisplay = text => {
+  if (primeiro) {
+    display.textContent = text
+    primeiro = false
+  } else {
+    display.textContent += text
+  }
+  display.textContent = display.textContent.substring(0, 17)
+  segundaVariavel = display.textContent
+  apagar = true
 }
+const inserir = e => inserirDisplay
+nums.forEach(e => e.addEventListener('click', inserir))
 
-function soma() {
-  //alert("1");
-  var f = document.getElementById('frm')
-  var n1 = document.getElementById('n1').value
-  var n2 = document.getElementById('n2').value
-  var soma = n1 + n2
-  alert('soma')
-}
-
-function subtracao() {
-  var f = document.getElementById('frm')
-  var n1 = document.getElementById('n1').value
-  var n2 = document.getElementById('n2').value
-  var soma = n1 - n2
-  alert(soma)
-}
-
-function multiplicacao() {
-  var f = document.getElementById('frm')
-  var n1 = document.getElementById('n1').value
-  var n2 = document.getElementById('n2').value
-  var soma = n1 * n2
-  alert(soma)
-}
-
-function divisao() {
-  var f = document.getElementById('frm')
-  var n1 = document.getElementById('n1').value
-  var n2 = document.getElementById('n2').value
-  var soma = n1 / n2
-  alert(soma)
-}
-
-function mostrarresultados() {}
-
-function limpar() {
-  //alert("1");
-  var f = document.getElementById('frm')
-  var nome1 = f.txtnome
-  var n1 = f.n1
-  var n2 = f.n2
-
-  nome1.value = ''
-  n1.value = ''
-  n2.value = ''
-}
-*/
+//***  PAREI NOS 18 MINUTIS */
