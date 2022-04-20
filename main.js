@@ -44,8 +44,30 @@ const inserirDisplay = text => {
 const inserir = e => inserirDisplay(e.target.textContent)
 nums.forEach(e => e.addEventListener('click', inserir))
 
-const inserirOperadores = e => {}
-
+/* converte os textos em operadores matematicos */
+const inserirOperadores = e => {
+  primeiro = true
+  operador = e.target.textContent
+  if ((operador = 'x')) {
+    operador = '*'
+  } else if ((operador = '÷')) {
+    operador = '/'
+  }
+  primeiraVariavel = display.textContent
+}
 operadores.forEach(e => e.addEventListener('click', inserirOperadores))
 
-//***  PAREI NOS 18 MINUTIS */
+const calcular = () => {
+  if (primeiraVariavel && operador) {
+    let result = primeiraVariavel + operador
+    if (segundaVariavel) {
+      result += primeiraVariavel
+    } else {
+      result += primeiraVariavel
+    }
+    display.textContent = eval(result.replace(',', '.'))
+  }
+}
+igual.addEventListener('click', calcular)
+
+/*23 min */
