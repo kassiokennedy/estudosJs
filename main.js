@@ -28,17 +28,24 @@ let apagarIgual
 
 /* recebe o texto */
 const inserirDisplay = text => {
+  /*Verificacao dos numeros digitados*/
   if (primeiro) {
     display.textContent = text
     primeiro = false
   } else {
     display.textContent += text
   }
+  /*Limite da quantidade de algarismos */
   display.textContent = display.textContent.substring(0, 17)
+
   segundaVariavel = display.textContent
   apagar = true
 }
-const inserir = e => inserirDisplay
+const inserir = e => inserirDisplay(e.target.textContent)
 nums.forEach(e => e.addEventListener('click', inserir))
+
+const inserirOperadores = e => {}
+
+operadores.forEach(e => e.addEventListener('click', inserirOperadores))
 
 //***  PAREI NOS 18 MINUTIS */
